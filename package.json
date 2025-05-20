@@ -1,0 +1,13 @@
+{
+  "name": "supplychain",
+  "description": "supplychain",
+  "author": "SupplyChain",
+  "workspaces": [
+    "v1-core",
+    "chainlink-functions"
+  ],
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "hardhat": "^2.22.19"
+  }
+}
