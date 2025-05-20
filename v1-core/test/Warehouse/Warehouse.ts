@@ -2,7 +2,7 @@ import { expect } from "chai";
 import hre from "hardhat";
 import { loadFixture } from "@nomicfoundation/hardhat-toolbox-viem/network-helpers";
 
-describe.only("Warehouse", () => {
+describe("Warehouse", () => {
   const deployWarehouseFixture = async () => {
     const [owner] = await hre.ethers.getSigners();
 
