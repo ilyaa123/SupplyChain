@@ -96,10 +96,10 @@ contract SupplyChain is Ownable, ISupplyChain, SupplyChainOrders, SupplyChainDel
         require(order.paid, "Not payed order");
         require(deliveryProduct.delivered, "Delivery not confirmed"); 
         
+        deliveryProduct.completed = true;
+
         require(_payForSeller(order.seller, order.totalCost), "Seller payment failed");
         require(_payForCouriers(legs, order.deliveryCost), "Courier payments failed");
-
-        deliveryProduct.completed = true;
     }
 
     function confirmDelivery(uint256 _deliveryId, address buyer) external {
